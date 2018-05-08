@@ -43,6 +43,7 @@ setup(
         ],
         extras_require={
             'dev': [
+                'twine',
                 'pypandoc',
                 'pytest',
                 'pytest-cov',
