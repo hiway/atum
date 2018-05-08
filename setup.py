@@ -40,5 +40,12 @@ setup(
             'Topic :: Utilities',
         ],
         install_requires=[
-        ]
+        ],
+        extras_require={
+            'dev': [
+                'pypandoc',
+                'pytest',
+                'pytest-cov',
+            ],
+        },
 )
