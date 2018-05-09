@@ -6,9 +6,7 @@ in your Python scripts.
 
 **Status: Alpha; this is an experiment.**
 
-## Erlang documentation:
-
-http://erlang.org/doc/reference_manual/data_types.html
+### Erlang documentation:
 
 > #### 3.3  Atom
 > An atom is a literal, a constant with name. An atom is to be enclosed in single quotes (') if it does not begin with a lower-case letter or if it contains other characters than alphanumeric characters, underscore (_), or @.
@@ -19,6 +17,8 @@ http://erlang.org/doc/reference_manual/data_types.html
 > 'Monday'
 > 'phone number'
 > ```
+> http://erlang.org/doc/reference_manual/data_types.html
+
 
 Unlike Erlang's atom, `atum` does not impose the same limitations. 
 You may import any valid Python name from atum - even all uppercase. 
@@ -83,7 +83,7 @@ assert q.get() == user_is_awake
 
 ### Technical Details
 
-Atum simply imports Python strings with the same name as their content.
+Atum simply imports Python strings with the same content as their name.
 
 Here is the content of atum.py in its entirety:
 
