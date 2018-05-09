@@ -23,7 +23,7 @@ def read(*names, **kwargs):
 
 setup(
         name='atum',
-        version='0.1.1_1',
+        version='0.2.0',
         license='MIT',
         description='Erlang-like atoms in Python 3',
         long_description=read('README.rst'),

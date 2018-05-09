@@ -81,6 +81,30 @@ Atums also make for readable sentinel values or event-names.
 
    assert q.get() == user_is_awake
 
+Technical Details
+~~~~~~~~~~~~~~~~~
+
+Atum simply imports Python strings with the same name as their content.
+
+Here is the content of atum.py in its entirety:
+
+.. code:: python
+
+   import sys as _sys
+
+
+   class Atum(object):
+       def __getattr__(self, item):
+           if item.startswith('__'):
+               return self.__getattribute__(item)
+           return item
+
+       def __getitem__(self, item):
+           return item
+
+
+   _sys.modules[__name__] = Atum()
+
 Known Issues
 ~~~~~~~~~~~~
 
