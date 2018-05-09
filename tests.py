@@ -22,15 +22,7 @@ def test_atum_str():
 
 def test_atum_repr():
     from atum import online
-    assert repr(online) == 'Atum(online)'
-
-
-def test_atum_import_bare_class_identity_fails():
-    from atum import Atum
-    from atum import test as test_
-    test = Atum('test')
-    assert test == test_
-    assert test is not test_
+    assert repr(online) == "'online'"
 
 
 def test_atum_getattr_arbitrary_atoms():
