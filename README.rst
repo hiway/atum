@@ -2,7 +2,7 @@ atum
 ====
 
 Atum is a tiny Python library that you can use to emulate the basic
-functionality of Erlang’s ``Atom`` in your Python scripts.
+functionality of Erlang’s ``atom`` in your Python scripts.
 
 **Status: Alpha; this is an experiment.**
 
@@ -25,6 +25,9 @@ http://erlang.org/doc/reference_manual/data_types.html
       phone_number
       'Monday'
       'phone number'
+
+Unlike Erlang’s atom, ``atum`` does not impose the same limitations. You
+may import any valid Python name from atum - even all uppercase.
 
 Examples
 --------
