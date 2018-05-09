@@ -2,6 +2,8 @@
 
 Erlang-like atoms in Python 3
 
+**Status: Alpha; this is an experiment.**
+
 A tiny utility that lets you refer to often-used 
 strings in your project as imported object names. 
 
