@@ -8,6 +8,8 @@ class Atum(object):
         self._name = name
 
     def __eq__(self, other):
+        if isinstance(other, str):
+            return self._name == other
         return self._name == getattr(other, '_name')
 
     def __str__(self):

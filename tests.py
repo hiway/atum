@@ -47,3 +47,9 @@ def test_atum_lookup_items():
     test_2 = atum['test']
     assert test_1 == test_2
     assert test_1 is test_2
+
+
+def test_atum_string_compare():
+    # https://github.com/hiway/atum/issues/1
+    from atum import this_is_a_test
+    assert this_is_a_test == 'this_is_a_test'
