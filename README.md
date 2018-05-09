@@ -23,6 +23,12 @@ http://erlang.org/doc/reference_manual/data_types.html
 Unlike Erlang's atom, `atum` does not impose the same limitations. 
 You may import any valid Python name from atum - even all uppercase. 
 
+## Install
+
+```
+$ pip install atum
+```
+
 ## Examples
 
 
