@@ -4,7 +4,7 @@ Atum is a tiny Python library that you can use
 to emulate the basic functionality of Erlang's `atom` 
 in your Python scripts. 
 
-**Status: Alpha; this is an experiment.**
+**Status: Beta; this is an experiment.**
 
 ### Erlang documentation:
 
