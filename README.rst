@@ -7,9 +7,7 @@ functionality of Erlang’s ``atom`` in your Python scripts.
 **Status: Alpha; this is an experiment.**
 
 Erlang documentation:
----------------------
-
-http://erlang.org/doc/reference_manual/data_types.html
+~~~~~~~~~~~~~~~~~~~~~
 
    .. rubric:: 3.3 Atom
       :name: atom
@@ -25,6 +23,8 @@ http://erlang.org/doc/reference_manual/data_types.html
       phone_number
       'Monday'
       'phone number'
+
+   http://erlang.org/doc/reference_manual/data_types.html
 
 Unlike Erlang’s atom, ``atum`` does not impose the same limitations. You
 may import any valid Python name from atum - even all uppercase.
@@ -91,7 +91,7 @@ Atums also make for readable sentinel values or event-names.
 Technical Details
 ~~~~~~~~~~~~~~~~~
 
-Atum simply imports Python strings with the same name as their content.
+Atum simply imports Python strings with the same content as their name.
 
 Here is the content of atum.py in its entirety:
 
@@ -99,12 +99,16 @@ Here is the content of atum.py in its entirety:
 
    import sys as _sys
 
+   # intern() is a builtin in Python 2.
+   if _sys.version_info > (3, 0):
+       intern = _sys.intern
+
 
    class Atum(object):
        def __getattr__(self, item):
            if item.startswith('__'):
                return self.__getattribute__(item)
-           return item
+           return intern(item)
 
        def __getitem__(self, item):
            return item

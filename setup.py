@@ -23,7 +23,7 @@ def read(*names, **kwargs):
 
 setup(
         name='atum',
-        version='0.2.0',
+        version='0.3.0',
         license='MIT',
         description='Erlang-like atoms in Python 3',
         long_description=read('README.rst'),
@@ -32,7 +32,7 @@ setup(
         url='https://github.com/hiway/atum',
         py_modules=['atum'],
         classifiers=[
-            'Development Status :: 3 - Alpha',
+            'Development Status :: 4 - Beta',
             'Intended Audience :: Developers',
             'License :: OSI Approved :: MIT License',
             'Programming Language :: Python',

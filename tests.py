@@ -8,8 +8,12 @@ def test_atum():
 
 
 def test_atum_in_queue():
+    import sys
     from atum import user_is_awake
-    from queue import Queue
+    if sys.version_info > (3, 0):
+        from queue import Queue
+    else:
+        from Queue import Queue
     q = Queue()
     q.put(user_is_awake)
     assert q.get() == user_is_awake
