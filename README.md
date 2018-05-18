@@ -111,4 +111,10 @@ _sys.modules[__name__] = Atum()
 ### Known Issues
 
 - Atum does not support using `@` in imported names 
-  as Python's syntax does not allow it. 
+  as Python's syntax does not allow it.
+  
+### References
+
+- https://github.com/esl/Pyrlang/blob/gevent/Pyrlang/Term/atom.py
+- https://me.net.nz/blog/atoms-slash-symbols-in-python/
+ 
